@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   root 'orders#index'
 
+  resources :orders do
+    # 嵌套/巢狀路由，這樣可以產生出 orders/1/comments/ 的 url
+    resources :comments, only: [:create]
+    resources :votes 
+ end
+
   resources :users, only: [:new, :create]
   get '/register', to: 'users#new'
 

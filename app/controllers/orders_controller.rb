@@ -6,11 +6,14 @@ class OrdersController < ApplicationController
   def index
     # binding.pry
     @orders = Order.all
+    @current_user = current_user
   end
 
   # GET /orders/1
   # GET /orders/1.json
   def show
+     @comments = @order.comments
+     @comment = Comment.new
   end
 
   # GET /orders/new
