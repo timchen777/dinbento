@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Order.create(name: "bob",  description: "1 big mac with coca cola")
+Order.create(name: "amy",  description: "2 big mac with coca cola")
+Order.create(name: "mary", description: "3 big mac with coca cola")
+Order.create(name: "andy", description: "4 big mac with coca cola")
